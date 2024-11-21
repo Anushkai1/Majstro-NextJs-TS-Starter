@@ -136,7 +136,7 @@ export function JwtSignUpView() {
           <>
             {`Already have an account? `}
             <Link component={RouterLink} href={paths.auth.jwt.signIn} variant="subtitle2">
-              Get started
+              Sign in
             </Link>
           </>
         }
