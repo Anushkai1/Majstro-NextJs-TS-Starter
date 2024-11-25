@@ -4,6 +4,10 @@ import React from 'react'
 
 import { Box, useTheme } from '@mui/material'
 
+import { BorderRadiousLarge } from 'src/theme/core';
+
+import QuestionsHeader from 'src/components/QuestionsHeader';
+
 
 function NewSectionView() {
   const theme = useTheme();
@@ -16,10 +20,12 @@ function NewSectionView() {
           lg: 'calc(100% - 80px)'
         },
         maxWidth: 'md',
-        background: theme.palette.grey[200]
+        background: theme.palette.grey[200],
+        p: 3,
+        borderRadius: BorderRadiousLarge
       }}
     >
-      sdfsf
+      <QuestionsHeader />
     </Box>
   )
 }
