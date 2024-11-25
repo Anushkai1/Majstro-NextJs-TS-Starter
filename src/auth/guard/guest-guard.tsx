@@ -8,7 +8,6 @@ import { CONFIG } from 'src/config-global';
 
 import { SplashScreen } from 'src/components/loading-screen';
 
-import { useAuthContext } from '../hooks';
 
 // ----------------------------------------------------------------------
 
@@ -21,8 +20,8 @@ export function GuestGuard({ children }: Props) {
 
   const searchParams = useSearchParams();
 
-  const { loading, authenticated } = useAuthContext();
-
+  // const { loading, authenticated } = useAuthContext();
+  const { authenticated, loading } = { authenticated: true, loading: false }
   const [isChecking, setIsChecking] = useState<boolean>(true);
 
   const returnTo = searchParams.get('returnTo') || CONFIG.auth.redirectPath;
